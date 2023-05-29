@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Income Tax Calculator</string>
+    <string-array name="entries_80u">
+        <item>None</item>
+        <item>Normal (less than 80%)</item>
+        <item>Severe (greater than 80%)</item>
+
+    </string-array>
+    <string-array name="entries_50B">
+        <item>None</item>
+        <item>Self or Dependent Age (less than 60)</item>
+        <item>Self or Dependent Age (> than 60)</item>
+
+    </string-array>
+    <string-array name="entries_80DD">
+        <item>None</item>
+        <item>Disability Percentage(less than 80%)</item>
+        <item>Disability Percentage(80% Above)</item>
+
+    </string-array>
+
+</resources>

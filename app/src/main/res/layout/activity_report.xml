@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:padding="10dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow>
+                <TextView
+                    android:text="Section"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="Old Regime"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="New Regime"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <TextView
+                    android:text="Income"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvIncome"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvnIncome"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <TextView
+                    android:text="Standard Deduction"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvStandardDeduction"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvnStandardDeduction"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <TextView
+                    android:text="Exempted HRA"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvExemptedHRA"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvnExemptedHRA"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <TextView
+                    android:text="Deduction"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvDeduction"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvnDeduction"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <TextView
+                    android:text="Taxable Income"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvTaxableIncome"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvnTaxableIncome"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <TextView
+                    android:text="Tax"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvTax"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvnTax"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <TextView
+                    android:text="Educational Cess"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvEducationalCess"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvnEducationalCess"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+                <TextView
+                    android:text="Overall Tax"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvOverallTax"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvnOverallTax"
+                    android:text="Rs. 0"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

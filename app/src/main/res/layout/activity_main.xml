@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/tl1"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="5dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Annual Income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etAnnualIncome"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="other Income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etHRA"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tvDeduction"
+                android:text="Deduction"
+                android:layout_below="@id/tl1"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl2"
+                android:layout_below="@id/tvDeduction"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Standard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etStandardDeduction"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tv80C"
+                android:text="80C,80CCC,80CCD"
+                android:layout_below="@id/tl2"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl3"
+                android:layout_below="@id/tv80C"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="SPF, FBF, HF, PPF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etPPF"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="LIC/ PLI/ ULIP premia paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etLifeInsurance"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Deposits of Mutualfund"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etDepositeofMutualfund"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Tution fees for any 2children"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etTutionfees"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Fixed deposits for 5 yrs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etFixeddepositefor5yrs"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Deposits Under Senior Citizen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etdepositeunderseniorcitizen"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Investment on NSC VIII issue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etInvestmentonNSCVIIIissue"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Employeecontribute any national scheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etEmployeecontributeanynationalscheme"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+
+
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Repayment of Housing Loan principal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etHousingLoan"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="NSC Accrued Interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etNSCAccruedInterest"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+
+
+
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Amount deposite any pension plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etOthers"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tv80CCD1B"
+                android:text="80CCD (1B)"
+                android:layout_below="@id/tl3"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl4"
+                android:layout_below="@id/tv80CCD1B"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="National Pension Scheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etNPS"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tv80E"
+                android:text="80E-Interest of Education Loan"
+                android:layout_below="@id/tl4"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl5"
+                android:layout_below="@id/tv80E"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:paddingBottom="5dp"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Education Loan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etEduLoan"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tv80TTA"
+                android:text="80TTA-Interest From Savings Account"
+                android:layout_below="@id/tl5"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl6"
+                android:layout_below="@id/tv80TTA"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Deposit Interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etDepositInterest"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tv80TTB"
+                android:text="80TTB-Interest on fixed deposite for senior citizen"
+                android:layout_below="@id/tl6"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl7"
+                android:layout_below="@id/tv80TTB"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Interest on fixed deposite for senior citizen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etInterestseniorcitizen"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tv80D"
+                android:text="80D-Medical Insurance Premium for Self, Spouse or Dependents"
+                android:layout_below="@id/tl7"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl8"
+                android:layout_below="@id/tv80D"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Medical Insurance (Self)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etMedInsSelf"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Medical Insurance (Parent)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etMedInsParent"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tv80G"
+                android:text="80G-Donation"
+                android:layout_below="@id/tl8"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl9"
+                android:layout_below="@id/tv80G"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:paddingBottom="5dp"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Donation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etDonation"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tv80EEB"
+                android:text="80EEB-Interest on loan for purchase Electric Vehicles"
+                android:layout_below="@id/tl9"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl10"
+                android:layout_below="@id/tv80EEB"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:paddingBottom="5dp"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Interest Paid on electric vehicles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etInterestPaidonelectricvehicles"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tv80EE"
+                android:text="80EE-Repayment of Interest in Housing Loan"
+                android:layout_below="@id/tl10"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl11"
+                android:layout_below="@id/tv80EE"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:paddingBottom="5dp"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Repayment of HouseLoan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etRepaymentofHouseLoan"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/tvProfessionalTax"
+                android:text="Professional Tax"
+                android:layout_below="@id/tl11"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl12"
+                android:layout_below="@id/tvProfessionalTax"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:paddingBottom="5dp"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Professional Tax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etProfessionalTax"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tv80U"
+                android:text="80U- Deduction For Disability Percentage"
+                android:layout_below="@id/tl12"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl13"
+                android:layout_below="@id/tv80U"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:paddingBottom="5dp"
+                    android:padding="10dp">
+                    <Spinner
+                        android:id="@+id/sp80U"
+                        android:entries="@array/entries_80u"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/et80U"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv80DD"
+                android:text="80DD-Medical Treatment for dependant and disabled maintenance"
+                android:layout_below="@id/tl13"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl14"
+                android:layout_below="@id/tv80DD"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:paddingBottom="5dp"
+                    android:padding="10dp">
+                    <Spinner
+                        android:id="@+id/sp80DD"
+                        android:entries="@array/entries_80DD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/et80DD"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/tv50B"
+                android:text="80DDB-Medical Expences self or Dependent"
+                android:layout_below="@id/tl14"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl15"
+                android:layout_below="@id/tv50B"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:paddingBottom="5dp"
+                    android:padding="10dp">
+                    <Spinner
+                        android:id="@+id/sp50B"
+                        android:entries="@array/entries_50B"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/et50B"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvSection10"
+                android:text="Exemption HRA"
+                android:layout_below="@id/tl15"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl16"
+                android:layout_below="@id/tvSection10"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="House Rent Allowance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etHraallowance"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Basic+DA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etBasic"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="HRA Paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etHrapaid"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/tvSection24"
+                android:text="Home Loan Int U/S 24"
+                android:layout_below="@id/tl16"
+                android:textColor="@color/teal_700"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl17"
+                android:layout_below="@id/tvSection24"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Home Loan Interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etHomeLoan"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="1"
+                    android:padding="10dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_weight="0.1"
+                        android:text="Repair or Recontruction of House Property"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/etRepair"
+                        android:textSize="18dp"
+                        android:layout_weight="0.9"
+                        android:inputType="numberSigned"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
+
+
+
+
+
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:text="Calculate"
+                android:layout_below="@id/tl17"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"
+                android:textSize="24dp"
+                android:background="@drawable/btn_bg"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
